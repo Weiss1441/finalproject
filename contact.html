@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Endgame Gear</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <base href="./">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <span class="logo">⚡</span> Endgame Gear
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+            <li class="nav-item">
+              <button id="darkModeToggle" class="btn btn-outline-light me-2">🌙 Dark Mode</button>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="cart.html">
+                🛒 Cart <span class="badge bg-danger" id="cartCount">0</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-header-gaming">
+      <div class="container">
+        <h1>Contact Us</h1>
+        <p>We're here to help</p>
+      </div>
+    </section>
+
+    <section class="contact-section py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mb-4">
+            <div class="contact-form-wrapper">
+              <h3 class="mb-4">Send Us a Message</h3>
+              <form id="contactForm">
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="firstName" required>
+                    <div class="invalid-feedback">Please enter your first name</div>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" required>
+                    <div class="invalid-feedback">Please enter your last name</div>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Email Address</label>
+                  <input type="email" class="form-control" id="contactEmail" required>
+                  <div class="invalid-feedback">Please enter a valid email address</div>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Phone Number</label>
+                  <input type="tel" class="form-control" id="contactPhone">
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Subject</label>
+                  <select class="form-select" id="subject" required>
+                    <option value="">Choose...</option>
+                    <option value="general">General Inquiry</option>
+                    <option value="order">Order Status</option>
+                    <option value="product">Product Question</option>
+                    <option value="technical">Technical Support</option>
+                    <option value="return">Returns & Refunds</option>
+                    <option value="other">Other</option>
+                  </select>
+                  <div class="invalid-feedback">Please select a subject</div>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Message</label>
+                  <textarea class="form-control" id="message" rows="6" required></textarea>
+                  <div class="invalid-feedback">Please enter your message</div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+              </form>
+              <div id="formSuccess" class="alert alert-success mt-3" style="display: none;">
+                <strong>Success!</strong> Your message has been sent. We'll get back to you soon.
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="contact-info-card mb-4">
+              <h4>Contact Information</h4>
+              <div class="contact-item">
+                <div class="contact-icon">📍</div>
+                <div>
+                  <strong>Address</strong>
+                  <p>123 Gaming Street<br>Tech City, TC 12345<br>United States</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">📧</div>
+                <div>
+                  <strong>Email</strong>
+                  <p>support@EndgameGear.com</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">📞</div>
+                <div>
+                  <strong>Phone</strong>
+                  <p>+7 (777) 123-4567</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">🕐</div>
+                <div>
+                  <strong>Business Hours</strong>
+                  <p>Monday - Friday: 9AM - 6PM<br>Saturday: 10AM - 4PM<br>Sunday: Closed</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section py-5">
+      <div class="container">
+        <h2 class="section-title text-center mb-5">Frequently Asked Questions</h2>
+        <div class="accordion" id="faqAccordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                How long does shipping take?
+              </button>
+            </h2>
+            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Standard shipping typically takes 3-5 business days. Express shipping is available for 1-2 day delivery. Orders placed before 2PM ship the same day.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                What is your return policy?
+              </button>
+            </h2>
+            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                We offer a 30-day money-back guarantee on all products. Items must be in original condition with all packaging. Contact our support team to initiate a return.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                Do you offer warranty on products?
+              </button>
+            </h2>
+            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Yes! All products come with manufacturer warranty. Most items include 1-2 year warranty. Extended warranty options are available at checkout.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                Do you ship internationally?
+              </button>
+            </h2>
+            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Yes, we ship to over 50 countries worldwide. International shipping rates and delivery times vary by location. Check our shipping page for details.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                Can I track my order?
+              </button>
+            </h2>
+            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Absolutely! Once your order ships, you'll receive a tracking number via email. You can track your package in real-time through our website or the carrier's site.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <h5>Endgame Gear</h5>
+          <p class="faint-text">Your ultimate destination for professional gaming equipment</p>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h5>Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h5>Contact Info</h5>
+          <p>Email: support@EndgameGear.com</p>
+          <p>Phone: +7 (777) 123-4567</p>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-md-6">
+          <p class="faint-text">&copy; 2025 Endgame Gear. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <!-- Footer policy links removed per request -->
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
