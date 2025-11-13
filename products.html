@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products - Endgame Gear</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <base href="./">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <span class="logo">⚡</span> Endgame Gear
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link active" href="products.html">Products</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item"><button id="darkModeToggle" class="btn btn-outline-light me-2">🌙 Dark Mode</button></li>
+            <li class="nav-item">
+              <a class="nav-link" href="cart.html">
+                🛒 Cart <span class="badge bg-danger" id="cartCount">0</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-header-gaming">
+      <div class="container">
+        <h1>Our Products</h1>
+        <p>Premium gaming gear for champions</p>
+      </div>
+    </section>
+
+    <section class="products-section py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 mb-4">
+            <div class="filters-sidebar">
+              <h4>Filters</h4>
+                            
+              <div class="filter-group">
+                <h5>Category</h5>
+                <div class="form-check">
+                  <input class="form-check-input filter-checkbox" type="checkbox" value="mice" id="filterMice" checked>
+                  <label class="form-check-label" for="filterMice">Gaming Mice</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input filter-checkbox" type="checkbox" value="keyboards" id="filterKeyboards" checked>
+                  <label class="form-check-label" for="filterKeyboards">Keyboards</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input filter-checkbox" type="checkbox" value="headsets" id="filterHeadsets" checked>
+                  <label class="form-check-label" for="filterHeadsets">Headsets</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input filter-checkbox" type="checkbox" value="monitors" id="filterMonitors" checked>
+                  <label class="form-check-label" for="filterMonitors">Monitors</label>
+                </div>
+              </div>
+
+              <div class="filter-group">
+                <h5>Price Range</h5>
+                <select class="form-select" id="priceFilter">
+                  <option value="all">All Prices</option>
+                  <option value="0-50">Under $50</option>
+                  <option value="50-100">$50 - $100</option>
+                  <option value="100-200">$100 - $200</option>
+                  <option value="200-500">$200 - $500</option>
+                </select>
+              </div>
+
+              <div class="filter-group">
+                <h5>Sort By</h5>
+                <select class="form-select" id="sortFilter">
+                  <option value="featured">Featured</option>
+                  <option value="price-low">Price: Low to High</option>
+                  <option value="price-high">Price: High to Low</option>
+                  <option value="name">Name: A-Z</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-9">
+            <div class="row g-4" id="productsGrid">
+              <div class="col-lg-4 col-md-6 product-item" data-category="mice" data-price="79.99">
+                <div class="product-card">
+                  <div class="product-badge">New</div>
+                  <div class="product-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+                  <div class="product-content">
+                    <h4>ProX Gaming Mouse</h4>
+                    <p class="product-description">25,000 DPI optical sensor, RGB lighting</p>
+                    <p class="product-price">$79.99</p>
+                    <button class="btn btn-primary w-100 add-to-cart" data-name="ProX Gaming Mouse" data-price="79.99">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 product-item" data-category="mice" data-price="59.99">
+                <div class="product-card">
+                  <div class="product-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
+                  <div class="product-content">
+                    <h4>Elite Wireless Mouse</h4>
+                    <p class="product-description">20,000 DPI, 70-hour battery life</p>
+                    <p class="product-price">$59.99</p>
+                    <button class="btn btn-primary w-100 add-to-cart" data-name="Elite Wireless Mouse" data-price="59.99">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 product-item" data-category="keyboards" data-price="129.99">
+                <div class="product-card">
+                  <div class="product-badge">Sale</div>
+                  <div class="product-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
+                  <div class="product-content">
+                    <h4>Mechanical RGB Keyboard</h4>
+                    <p class="product-description">Cherry MX switches, full RGB</p>
+                    <p class="product-price">$129.99</p>
+                    <button class="btn btn-primary w-100 add-to-cart" data-name="Mechanical RGB Keyboard" data-price="129.99">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 product-item" data-category="keyboards" data-price="89.99">
+                <div class="product-card">
+                  <div class="product-image" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);"></div>
+                  <div class="product-content">
+                    <h4>TKL Gaming Keyboard</h4>
+                    <p class="product-description">Compact design, tactile switches</p>
+                    <p class="product-price">$89.99</p>
+                    <button class="btn btn-primary w-100 add-to-cart" data-name="TKL Gaming Keyboard" data-price="89.99">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 product-item" data-category="headsets" data-price="99.99">
+                <div class="product-card">
+                  <div class="product-badge">Hot</div>
+                  <div class="product-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);"></div>
+                  <div class="product-content">
+                    <h4>7.1 Surround Headset</h4>
+                    <p class="product-description">Virtual surround sound, noise canceling</p>
+                    <p class="product-price">$99.99</p>
+                    <button class="btn btn-primary w-100 add-to-cart" data-name="7.1 Surround Headset" data-price="99.99">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 product-item" data-category="headsets" data-price="149.99">
+                <div class="product-card">
+                  <div class="product-image" style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);"></div>
+                  <div class="product-content">
+                    <h4>Wireless Pro Headset</h4>
+                    <p class="product-description">Low latency, 50mm drivers</p>
+                    <p class="product-price">$149.99</p>
+                    <button class="btn btn-primary w-100 add-to-cart" data-name="Wireless Pro Headset" data-price="149.99">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 product-item" data-category="monitors" data-price="349.99">
+                <div class="product-card">
+                  <div class="product-badge">New</div>
+                  <div class="product-image" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);"></div>
+                  <div class="product-content">
+                    <h4>165Hz Gaming Monitor</h4>
+                    <p class="product-description">27" QHD, 1ms response time</p>
+                    <p class="product-price">$349.99</p>
+                    <button class="btn btn-primary w-100 add-to-cart" data-name="165Hz Gaming Monitor" data-price="349.99">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 product-item" data-category="monitors" data-price="449.99">
+                <div class="product-card">
+                  <div class="product-image" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);"></div>
+                  <div class="product-content">
+                    <h4>240Hz Pro Monitor</h4>
+                    <p class="product-description">24.5" FHD, G-Sync compatible</p>
+                    <p class="product-price">$449.99</p>
+                    <button class="btn btn-primary w-100 add-to-cart" data-name="240Hz Pro Monitor" data-price="449.99">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 product-item" data-category="mice" data-price="39.99">
+                <div class="product-card">
+                  <div class="product-image" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);"></div>
+                  <div class="product-content">
+                    <h4>Budget Gaming Mouse</h4>
+                    <p class="product-description">12,000 DPI, ergonomic design</p>
+                    <p class="product-price">$39.99</p>
+                    <button class="btn btn-primary w-100 add-to-cart" data-name="Budget Gaming Mouse" data-price="39.99">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <h5>Endgame Gear</h5>
+          <p class="faint-text">Your ultimate destination for professional gaming equipment</p>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h5>Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h5>Contact Info</h5>
+          <p>Email: support@EndgameGear.com</p>
+          <p>Phone: +7 (777) 123-4567</p>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-md-6">
+          <p class="faint-text">&copy; 2025 Endgame Gear. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <!-- Footer policy links removed per request -->
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
