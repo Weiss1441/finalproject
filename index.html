@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Endgame Gear - Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <base href="./">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <span class="logo">⚡</span> Endgame Gear
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item"><button id="darkModeToggle" class="btn btn-outline-light me-2">Dark Mode</button></li>
+            <li class="nav-item">
+              <a class="nav-link" href="cart.html">
+                Cart <span class="badge bg-danger" id="cartCount">0</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero-gaming">
+      <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+        <!-- УБРАНЫ ИНДИКАТОРЫ (точки снизу) -->
+        <!-- <div class="carousel-indicators"> ... </div> -->
+
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="hero-slide d-flex align-items-center justify-content-center text-center" 
+                 style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 80vh;">
+              <div class="container">
+                <div class="row justify-content-center">
+                  <div class="col-lg-8 col-xl-7">
+                    <p class="hero-text mb-3" style="font-size: 1.4rem; color: rgba(255, 255, 255, 0.95);">
+                      Premium gaming gear for professional esports players
+                    </p>
+                    <h1 class="hero-title display-3 fw-bold mb-4" style="color: #fff; text-shadow: 2px 2px 15px rgba(0,0,0,0.4);">
+                      Level Up Your Game
+                    </h1>
+                    <a href="products.html" class="btn btn-primary btn-lg px-5 py-3 shadow-lg">
+                      Shop Now
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="api-section py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="card p-3 mb-3">
+              <h5>Random Gaming Quote</h5>
+              <p id="quote-text">Loading...</p>
+              <button id="new-quote-btn" class="btn btn-sm btn-primary">New Quote</button>
+            </div>
+            <div class="card p-3 mb-3">
+              <h5>Local Weather</h5>
+              <p id="weather-text">Fetching weather...</p>
+              <small class="text-muted">Allow geolocation to get local weather (falls back to Moscow)</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <h5>Endgame Gear</h5>
+          <p class="faint-text">Your ultimate destination for professional gaming equipment</p>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h5>Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h5>Contact Info</h5>
+          <p>Email: support@EndgameGear.com</p>
+          <p>Phone: +7 (777) 123-4567</p>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-md-6">
+          <p class="faint-text">&copy; 2025 Endgame Gear. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <!-- Footer policy links removed per request -->
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
